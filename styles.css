@@ -1,0 +1,157 @@
+*{
+    margin: auto;
+    color: white;
+}
+
+body{
+    background: linear-gradient(#00000042, #00000042), url("img/mesas2.jpg") top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.resultados{
+    text-align: center;
+    height: 55px;
+    width: 310px;
+    background: #CBDCB9;
+    color: black;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    box-shadow: inset 0px 2px 6px 3px #1d131b;
+}
+
+#resultado{
+    padding-top: 30px;
+}
+
+.container{
+    margin-left: 40%;
+    width: 360px;
+    margin-top: 20px;
+    background: #444446;
+    border-radius: 20px;
+    height: 510px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 2px 1px #0000005e;
+    position: absolute;
+}
+
+.container h1{
+    padding-left: 30px;
+    padding-bottom: auto;
+    font-size: 25px;
+}
+
+.solar{
+    margin-top: -25px;
+    margin-bottom: 9px;
+    width: 90px;
+    height: 30px;
+    background: #413131;
+    box-shadow: inset 0px 2px 6px 3px #1d131b;
+    border: 1px solid black;
+}
+
+form{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#label1{
+    margin-left: 20px;
+}
+
+#numero1{
+    font-size: 15px;
+    height: 25px;
+    margin-left: 5px;
+    width: 90px;
+    background: #CBDCB9;
+    color: black;
+    border: 0px solid black;
+    box-shadow: inset 0px 1px 3px 1px #1d131b;
+}
+
+#numero2{
+    font-size: 15px;
+    height: 25px;
+    width: 90px;
+    background: #CBDCB9;
+    color: black;
+    border: 0px solid black;
+    box-shadow: inset 0px 1px 3px 1px #1d131b;
+}
+hr{
+    color:blanchedalmond;
+}
+.btn{
+    height: 40px;
+    width: 50px;
+    margin-left: 12px;
+    margin-top: 20px;
+    background: #BABEBD;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnn{
+    height: 40px;
+    width: 50px;
+    margin-left: 12px;
+    margin-top: 20px;
+    background: #B3ABA4;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnc{
+    height: 40px;
+    width: 50px;
+    margin-left: 12px;
+    margin-top: 20px;
+    background: #d24937;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnnbajo{
+    height: 40px;
+    width: 50px;
+    margin-left: 12px;
+    margin-top: 20px;
+    background: #B3ABA4;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnmas{
+    height: 100px;
+    width: 50px;
+    margin-left: 12px;
+    margin-top: 20px;
+    background: #BABEBD;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    position: absolute;
+    left: 275px;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+.nada{
+    height: 40px;
+    width: 50px;
+    margin-left: 12px;
+    margin-top: 20px;
+    border-radius: 10px;
+    visibility: hidden;
+}

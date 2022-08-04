@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivn.net/npm/bootstrapes.8.0 beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384
+    BabxuPwQa21c/FVzBcN37UAyJxM6wuqIj61tLrcSXBszH/EvenYRRuwlolf1f1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="/sweetalert.min.js">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <script src="https:https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+        </style> 
+    <title>Calculadora Javascript</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CASIO</h1>
+        <div class="solar"></div>
+        <div id="resultado" class="resultados"></div>
+    <script>
+        var R=document.getElementById ("resultado");
+        function Propiedades(){
+            R.style.textAlign="center"
+            R.style.fontFamily="Fredericka the Great";
+            R.style.fontSize="25px";
+        }
+
+        function obtenerValores() {
+            var n1 = document.getElementById("numero1").value;
+            n1 = parseInt(n1, 10);
+            var n2 = document.getElementById("numero2").value;
+            n2 = parseInt(n2, 10)
+            return [n1, n2]
+        }
+
+        function Sumar() {
+            [n1, n2] = obtenerValores();
+            Propiedades()
+            R.innerHTML = "La suma de los numeros es :" + (n1 + n2);
+
+        }
+
+        function Restar() {
+            [n1, n2] = obtenerValores();
+            Propiedades()
+            R.innerHTML = "La Resta de los numeros es :" + (n1 - n2);
+
+        }
+
+        function Multiplicacion() {
+            [n1, n2] = obtenerValores();
+            Propiedades()
+            R.innerHTML = "La Multiplicacion de los numeros es :" + (n1 * n2);
+
+        }
+
+        function Division() {
+            [n1, n2] = obtenerValores();
+            Propiedades()
+            if (n2 === 0)
+                d = "Error: Division por 0"
+            else
+                d = n1 / n2;
+            R.innerHTML = "La Division de los numeros es :" + (d);
+
+        }
+
+        function Potenciacion() {
+            [n1, n2] = obtenerValores();
+            Propiedades()
+            R.innerHTML = "La Potenciacion de los numeros es :" + (Math.pow(n1, n2));
+
+        }
+
+        function Concatenacion() {
+            n1 = document.getElementById("numero1").value;
+            n2 = document.getElementById("numero2").value;
+            Propiedades();
+            R.innerHTML = "La concatenacion de los numeros es :" + (n1 + n2);
+
+        }
+
+        function Instruccion_If() {
+            [n1, n2] = obtenerValores();
+            Propiedades()
+            R.innerHTML = "Ejemplo con instruccion if usando sweetalert"
+            if (n1 > n2) {
+                swal("Mensaje", "n1 es mayor a n2")
+            } else if (n1 == n2) {
+                swal("Mensaje", "n1 es igual a n2", "success")
+            } else {
+                swal({
+                    title: "Mensaje",
+                    text: "n1 es menor que n2",
+                    icon: "info",
+                    button: "salir",
+                });
+            }
+        }
+
+        function Instruccion_For() {
+            [n1, n2] = obtenerValores();
+            Propiedades();
+            contador = 0;
+            for (i = n1; i <= n2; i++){
+                contador = contador + 1;
+            }
+            R.innerHTML = "El ciclos que realizo el for fueron :" + contador;
+
+        }
+
+        function Instruccion_switch() {
+            [n1, n2] = obtenerValores();
+            Propiedades();
+            R.innerHTML = "Ejemplo con instruccion Switch usando sweetalert";
+            switch (n1) {
+                case 1:
+                    swal("Mensaje", "n1 tiene un valor de 1")
+                    break;
+                case 2:
+                    swal("Mensaje", "n1 tiene un valor de 2", "Success");
+                    break;
+                default:
+                    swal({
+                        title: "Mensaje",
+                        text: "n1 tiene un valor mayor de 2",
+                        icon: "info",
+                        button: "salir",
+                    });
+                    break;
+            }
+        }
+    </script>
+        <form>
+            <label id="label1">Num 1</label>
+            <input type="Number" max="10000" min="0" placeholder="0" id="numero1"
+            autofocus>
+            <label>Num 2</label>
+            <input type="Number" max="10000" min="0" placeholder="0" id="numero2">
+            <input type="button" class="btn btn-dark w-25" onclick="MC()"
+            value="MC" required>
+            <input type="button" class="btn btn-dark w-25" onclick="instruccion_switch()"
+            value="switch">
+            <input type="button" class="btn btn-dark w-25" onclick="instriccion_if()"
+            value="if">
+            <input type="button" class="btn btn-dark w-25" onclick="Ponteciacion()"
+            value="Pont">
+            <input type="button" class="btn btn-dark w-25" onclick="Division()"
+            value="÷">
+
+            <input type="button" class="btn btn-dark w-25" onclick="Concatenacion()"
+            value="Ctn">
+            <input type="button" class="btnn btn-dark w-25" onclick="1()"
+            value="1">
+            <input type="button" class="btnn btn-dark w-25" onclick="2()"
+            value="2">
+            <input type="button" class="btnn btn-dark w-25" onclick="3()"
+            value="3">
+            <input type="button" class="btn btn-dark w-25" onclick="Multiplicar()"
+            value="x">
+
+            <input type="button" class="btn btn-dark w-25" onclick="instruccion_for()"
+            value="for">
+            <input type="button" class="btnn btn-dark w-23" onclick="4()"
+            value="4">
+            <input type="button" class="btnn btn-dark w-25" onclick="5()"
+            value="5">
+            <input type="button" class="btnn btn-dark w-25" onclick="6()"
+            value="6">
+            <input type="button" class="btn btn-dark w-25" onclick="Restar()"
+            value="-" required>
+
+            <input type="reset" class="btnc btn-dark w-25" onclick="clear()"
+            value="C/AC">
+            <input type="button" class="btnnbajo" onclick="7()"
+            value="7">
+            <input type="button" class="btnnbajo" onclick="8()"
+            value="8">
+            <input type="button" class="btnnbajo" onclick="9()"
+            value="9">
+
+            <input type="button" class="nada" onclick="nada()"
+            value="">
+            <input type="button" class="btnnbajo btn-dark w-25" onclick="0()"
+            value="0">
+
+            <input type="button" class="btnnbajo btn-dark w-25" onclick="00()"
+            value="00">
+            <input type="button" class="btnnbajo btn-dark w-25" onclick="punto()"
+            value=".">
+            <input type="button" class="btn btn-dark w-25" onclick="Sumar()"
+            value="=">
+            <input type="button" class="nada" onclick="nada()"
+            value="=">
+                <input type="button" class="btnmas" onclick="Sumar()"
+            value="+">
+        </form>
+    </div>
+</body>
+</html>
